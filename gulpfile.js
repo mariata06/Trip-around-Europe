@@ -1,0 +1,82 @@
+//"use strict";
+
+var gulp = require("gulp");
+var sass = require("gulp-sass");
+var plumber = require("gulp-plumber");
+var sourcemap = require("gulp-sourcemaps");
+var postcss = require("gulp-postcss");
+var autoprefixer = require("autoprefixer");
+var server = require("browser-sync").create();
+var csso = require("gulp-csso");
+var rename = require("gulp-rename");
+var webp = require("gulp-webp");
+var imagemin = require("gulp-imagemin");
+var svgstore = require("gulp-svgstore");
+var posthtml = require("gulp-posthtml");
+var include = require("posthtml-include");
+var del = require("del");
+var htmlmin = require("gulp-htmlmin");
+var uglify = require("gulp-uglify");
+var pump = require("pump");
+
+
+gulp.task("css", function () {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(csso())
+    .pipe(rename("style.min.css"))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    //.pipe(gulp.dest("source/css"))
+    .pipe(server.stream());
+});
+
+gulp.task("copy_css", function () {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(gulp.dest("build/css"))
+    //.pipe(gulp.dest("source/css"))
+    .pipe(server.stream());
+});
+
+
+
+gulp.task("server", function () {
+  server.init({
+    server: "source/"  /*потом будет build*/
+  });
+
+  gulp.watch("source/sass/**/*.{sass,scss}", gulp.series("css"));
+  gulp.watch("source/*.html").on("change", server.reload); /*добавила эту строку*/
+  /*
+  потом добавить эти строки на этапе основной сборки
+  */
+ /*
+  gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  */
+});
+
+/*потом добавить эти строки на этап сборки*/
+/*
+gulp.task("refresh", function (done) {
+  server.reload();
+  done();
+});
+*/
+
+gulp.task("start", gulp.series("css", "server"));
+/*потом добавить эти строки на этап сборки*/
+/*
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "min-js", "copy_css"));
+gulp.task("start", gulp.series("build", "server"));
+*/
