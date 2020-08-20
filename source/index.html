@@ -33,10 +33,11 @@
 
     <header class="page-header">
       <nav class="page-header__site-nav site-nav">
-        <div class="page-header__logo">
+        <div class="site-nav__logo">
           <picture>
-            <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
-            <img src="img/logo-desktop.svg" width="57" height="22" alt="Логотип сайта Путешествие по европе" class="page-header__img">
+            <source srcset="img/logo-tablet.svg" media="(max-width: 1023px)">
+            <img src="img/logo-desktop.svg" width="57" height="22" alt="Логотип сайта Путешествие по европе"
+              class="site-nav__logo-img">
           </picture>
         </div>
         <ul class="site-nav__list">
@@ -46,20 +47,21 @@
           <li class="site-nav__list-item">
             <a href="prices.html" class="site-nav__list-link">Цены</a>
           </li>
-          <li class="site-nav__list-item">
-            <a href="tel:+749978468446" class="site-nav__list-link"  aria-label="Позвонить">+7 (499)-784-684-46</a>
+          <li class="site-nav__list-item site-nav__list-item--phone">
+            <img src="img/phone.svg" width="30" height="30" alt="контактный телефон" class="site-nav__icon">
+            <a href="tel:+749978468446" class="site-nav__list-link site-nav__list-link--phone" aria-label="Позвонить">+7
+              (499)-784-684-46</a>
           </li>
         </ul>
         <button type="button" class="site-nav__close site-nav__close--nojs">
           <img src="img/cross.svg" width="23" height="22" alt="Закрыть меню">
         </button>
+        <div class="site-nav__mobile-menu burger-menu">
+          <button class="burger-menu burger-menu--nojs">
+            <img src="img/menu.svg" width="30" height="30" alt="Мобильное меню" class="burger-menu__button">
+          </button>
+        </div>
       </nav>
-
-      <div class="page-header__menu">
-        <button class="page-header__burger-menu burger-menu burger-menu--nojs">
-          <img src="img/menu.svg" width="30" height="30" alt="Мобильное меню" class="burger-menu__button">
-        </button>
-      </div>
     </header>
 
     <main class="page-main">
@@ -68,7 +70,8 @@
           Путешествие по Европе
         </h1>
         <p class="intro__about">
-          В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота природы.
+          В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота
+          природы.
         </p>
         <button type="button">
           Cмотреть тур
@@ -91,18 +94,68 @@
 
     </main>
 
-    <footer class="page-footer">
-      <ul class="page-footer__menu footer-menu">
-        <li class="footer-menu__item">
-
-        </li>
-        <li class="footer-menu__item">
-
-        </li>
-        <li class="footer-menu__item">
-
-        </li>
-      </ul>
+    <footer class="page-footer ">
+      <div class="page-footer__menu footer-menu">
+        <div class="footer-menu__item footer-menu__item--next-travels">
+          <h3 class="footer-menu__title">Следующие путешествия</h3>
+          <ul class="footer-menu__country-list">
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="marseilles.html">Марсель</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="nimes.html">Ним</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="montpellier.html">Монпелье</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="barcelona.html">Барселона</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="palm.html">Пальма</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="sardinia.html">Сардиния</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="palermo.html">Палермо</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="catania.html">Катания</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="naples.html">Неаполь</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="rome.html">Рим</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="kors.html">Корс</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="nice.html">Ницца</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="monaco.html">Монако</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="ding-les-bains.html">Динь-ле-Бен</a>
+            </li>
+            <li class="footer-menu__country-item">
+              <a class="footer-menu__country-link" href="grenoble.html">Гренобль</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer-menu__item footer-menu__item--contacts">
+          <h3 class="footer-menu__title">Наши контакты</h3>
+          <a href="mailto:puteshestviemechta@gmail.ru" class="footer-menu__link footer-menu__link--mail" aria-label="написать">puteshestviemechta@gmail.ru</a>
+          <a href="tel:+749978468446" class="footer-menu__link footer-menu__link--phone" aria-label="Позвонить">+7(499)-784-684-46</a>
+        </div>
+        <div class="footer-menu__item footer-menu__item--corporative">
+          <h3 class="footer-menu__title">Корпоративные путешествия</h3>
+          <p class="footer-menu__paragraph">Также вы можете заказать индивидуальное путешествие под вашу компанию. Подобные туры очень сближают компанию, помогают поддерживать корпоративный дух, а также являются оличным времяпрепровождением</p>
+        </div>
+      </div>
     </footer>
 
   </div>

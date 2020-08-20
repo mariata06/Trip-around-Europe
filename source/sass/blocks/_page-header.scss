@@ -1,21 +1,24 @@
-.header {
+.page-header {
   width: 1920px;
-  //border-bottom-left-radius: 30px;
-  //border-bottom-right-radius: 30px;
-  //padding-top: 260px;
-  //position: relative;
-  //z-index: 10;
+  padding-top: 39px;
+  padding-bottom: 38px;
+  padding-left: 375px;
+  padding-right: 375px;
   background-color: $white;
   //height: 632px;
 
-  @media (min-width: $tablet-width) {
-    padding-top: 100px;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
+  @media (max-width: $tablet-width) {
+    //padding-top: 18.5px;
+    //padding-bottom: 14.5px;
+    width: 1023px;
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: 21px;
+    padding-right: 0;
   }
 
-  @media (min-width: $mobile-width) {
-    padding-top: 50px;
-    //padding-bottom: 30px;
+  @media (max-width: $mobile-width) {
+    width: 767px;
+    padding-left: 16px;
   }
 }

@@ -27,11 +27,14 @@ body {
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
-  font-weight: 300;
-  //color: $color-white;
+  font-weight: 400;
+  color: $dark;
   background-color: $grey;
+  //min-width: 320px;
+}
 
-  min-width: 320px;
+ul {
+  list-style: none;
 }
 
 img {
@@ -41,6 +44,7 @@ img {
 
 a {
   text-decoration: none;
+  color: $very-dark;
 }
 
 .main {

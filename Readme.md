@@ -1,7 +1,9 @@
-# Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
+# Личный проект «Путешествие по Европе» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-* Студент: [Мария Турмасова](https://up.htmlacademy.ru/adaptive/19/user/1067017).
-* Наставник: [Виктория Коваленко](https://htmlacademy.ru/profile/id42638).
+* Исполнитель: [Мария Турмасова](https://up.htmlacademy.ru/adaptive/19/user/1067017).
+* Менеджер: [Софья Дышпан].
+* Тестировщик: [...].
+* Наставник: [...].
 
 ---
 
@@ -24,13 +26,7 @@ _`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`,
 
 #### 2. Создайте форк
 
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/1067017-sedona-19) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60807979-e1129f00-a18f-11e9-90d7-b44d2ff2c003.jpg">
-
-Получится вот так:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60807980-e1129f00-a18f-11e9-8137-45876f130340.jpg">
+[Откройте мастер-репозиторий] и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий будет скопирован в ваш аккаунт.
 
 #### 3. Клонируйте репозиторий на свой компьютер
 
@@ -49,12 +45,3 @@ git clone SSH-адрес_вашего_форка
 #### 4. Начинайте обучение!
 
 ---
-
-<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
-
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS, уровень 2](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
-
-[travis-image]: https://travis-ci.com/htmlacademy-adaptive/1067017-sedona-19.svg?branch=master
-[travis-url]: https://travis-ci.com/htmlacademy-adaptive/1067017-sedona-19
-[dependency-image]: https://david-dm.org/htmlacademy-adaptive/1067017-sedona-19/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/htmlacademy-adaptive/1067017-sedona-19?type=dev

@@ -31,8 +31,8 @@ gulp.task("css", function () {
     .pipe(csso())
     .pipe(rename("style.min.css"))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("build/css"))
-    //.pipe(gulp.dest("source/css"))
+    //.pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
 });
 
@@ -43,12 +43,22 @@ gulp.task("copy_css", function () {
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
-    //.pipe(gulp.dest("source/css"))
+    //.pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest("source/css"))
     .pipe(server.stream());
 });
 
-
+gulp.task("copy", function () {
+  return gulp.src([
+      "source/fonts/**/*.{woff,woff2}",
+      "source/img/**",
+      "source/js/**",
+      "source/*.ico"
+    ], {
+      base: "source"
+    })
+    .pipe(gulp.dest("build"));
+});
 
 gulp.task("server", function () {
   server.init({
@@ -59,8 +69,6 @@ gulp.task("server", function () {
   gulp.watch("source/*.html").on("change", server.reload); /*добавила эту строку*/
   /*
   потом добавить эти строки на этапе основной сборки
-  */
- /*
   gulp.watch("source/img/icon-*.svg", gulp.series("sprite", "html", "refresh"));
   gulp.watch("source/*.html", gulp.series("html", "refresh"));
   */
