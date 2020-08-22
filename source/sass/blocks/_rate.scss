@@ -1,0 +1,96 @@
+.rate {
+  display: flex;
+  flex-wrap: wrap;
+
+  &--active {
+    border-color: $salmon-pink;
+
+    .rate__title {
+      color: $salmon-pink;
+    }
+
+    .rate__paragraph {
+      border-color: $salmon-pink;
+    }
+
+    .rate__option-item {
+      position: relative;
+
+      &::before {
+        display: block;
+        content: url("../img/tick.svg");
+        position: absolute;
+        top: 5px;
+        left: -30px;
+      }
+    }
+  }
+
+  &:hover {
+    border-color: $salmon-pink;
+
+    .rate__title {
+      color: $salmon-pink;
+    }
+
+    .rate__paragraph {
+      border-color: $salmon-pink;
+    }
+
+    .rate__option-item {
+      position: relative;
+
+      &::before {
+        display: block;
+        content: url("../img/tick.svg");
+        position: absolute;
+        top: 5px;
+        left: -30px;
+      }
+    }
+  }
+}
+
+.rate__title {
+  margin: 0;
+  font-size: 28px;
+  line-height: 34px;
+  display: flex;
+  font-weight: 600;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
+
+.rate__paragraph {
+  margin: 0;
+  padding-bottom: 28px;
+  border-bottom: 1px solid rgba(20, 21, 23, 0.3);
+}
+
+.rate__button {
+  width: 100%;
+}
+
+.rate__option-list {
+  margin-top: 30px;
+  line-height: 32px;
+  padding-left: 30px;
+  padding-bottom: 39px;
+}
+
+.rate__option-item {
+  margin-bottom: 15px;
+  position: relative;
+
+  &::before {
+    display: block;
+    content: url("../img/tick-active.svg");
+    position: absolute;
+    top: 5px;
+    left: -30px;
+  }
+}
+
+.rate__amount {
+  align-self: end;
+}

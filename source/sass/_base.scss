@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  //overflow-x: hidden;
 }
 
 *,
@@ -19,7 +20,6 @@ html {
   overflow: hidden;
 }
 
-// от 767 - 320px мобильная версия
 body {
   margin: 0 auto;
   //padding: 0 25px;
@@ -47,6 +47,7 @@ a {
   color: $very-dark;
 }
 
+/*
 .main {
   width: 1920px;
   margin: 0 auto;
@@ -67,6 +68,7 @@ a {
     background-color: transparent;
   }
 }
+*/
 
 /*
 .catalog-main,
@@ -84,22 +86,3 @@ a {
   }
 }
 */
-
-.button {
-  font-family: "Monserrat", "Arial", sans-serif;
-  font-size: 18px;
-  line-height: 18px;
-  font-weight: 700;
-  //color: $color-dark-blue-2;
-  border-radius: 10px;
-  //background-color: $color-yellow-1;
-
-  &:hover {
-    background-color: yellow;
-  }
-
-  &:active {
-    background-color: yellow;
-    color: rgba(29, 46, 91, 0.302);
-  }
-}

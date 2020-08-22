@@ -1,6 +1,12 @@
 .site-nav {
+  width: 1170px;
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    width: 747px;
+  }
 }
 
 .site-nav__close {

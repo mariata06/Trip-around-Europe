@@ -1,8 +1,45 @@
 .intro {
+  //min-width: 1024px;
   height: 860px;
-  background: $light-blue url("../img/header-greece-desktop.jpg") no-repeat top center;
+  background-image: url("../img/header-greece-desktop.jpg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  //background-size: 1920px 860px; //443px 1089px;
+  //background-position: 50% 62%;
+  background-color: $light-blue;
+
+  @media (max-width: $tablet-width) {
+    background-image: url("../img/header-greece-tablet.jpg");
+  }
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/header-greece-mobile.jpg");
+  }
+}
+
+.intro__content {
+  width: 412px;
+  padding-top: 185px;
+  //margin-right: 433px;
+  margin-left: 1075px;
+
+  @media (max-width: $tablet-width) {
+    width: 398px;
+    padding: 60px 185px 83px 185px;
+  }
 }
 
 .intro__title {
   margin: 0;
+  color: $white;
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 80px;
+}
+
+.intro__about {
+  color: $white;
+  font-size: 16px;
+  line-height: 27.2px;
+  letter-spacing: 0.47px;
 }

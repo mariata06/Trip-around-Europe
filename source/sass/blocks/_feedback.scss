@@ -1,0 +1,19 @@
+.feedback {
+  padding-left: 375px;
+  padding-right: 375px;
+  background: $white;
+  min-height: 455px;
+}
+
+.feedback__container {
+  background: url("../img/sunset-desktop.jpg") no-repeat; // top left;
+  //background-size: 844px 455px;
+  //background-position: 100% 50%; //50% 62%;
+  min-height: 455px;
+  padding-top: 70px;
+}
+
+.feedback__form {
+  //margin-top: 70px;
+  margin-left: 514px;
+}

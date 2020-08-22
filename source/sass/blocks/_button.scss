@@ -1,0 +1,25 @@
+.button {
+  font-family: "Monserrat", "Arial", sans-serif;
+  font-size: 12px;
+  line-height: auto;
+  font-weight: 700;
+  color: $white;
+  background-color: $salmon-pink;
+  text-transform: uppercase;
+  padding: 30px 40px 30px 40px;
+  border: none;
+  letter-spacing: 2px;
+
+  &:hover {
+    background-color: $salmon-orange;
+  }
+
+  &:active {
+    background-color: yellow;
+    color: rgba(29, 46, 91, 0.302);
+  }
+}
+
+.button__icon {
+  margin-left: 125px;
+}

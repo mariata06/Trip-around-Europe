@@ -1,0 +1,16 @@
+.prices {
+  padding-top: 250px;
+  padding-left: 375px;
+  padding-right: 375px;
+  padding-bottom: 138px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: $white;
+}
+
+.prices__rates {
+  width: 370px;
+  border: 1px solid rgba(20, 21, 23, 0.3);
+  padding: 40px 30px 30px 30px;
+}

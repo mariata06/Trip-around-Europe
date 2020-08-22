@@ -1,0 +1,43 @@
+.rate-info {
+  border: none;
+  padding-top: 79px;
+  padding-left: 81px;
+  padding-right: 0;
+}
+
+.rate-info__title {
+  font-size: 55px;
+  font-weight: 600;
+  line-height: 90px;
+  margin: 0;
+  padding-bottom: 20px;
+  display: inline;
+  border-bottom: 1px solid $salmon-pink;
+}
+
+.rate-info__paragraph {
+  margin-top: 30px;
+  width: 299px;
+  opacity: 0.7;
+  line-height: 27.2px;
+  margin-bottom: 60px;
+}
+
+.rate-info__contact {
+  font-size: 22px;
+  line-height: 34px;
+  font-weight: 500;
+  margin: 0;
+  padding-left: 50px;
+}
+
+.rate-info__phone {
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.rate-info__link {
+  padding-left: 15px;
+}

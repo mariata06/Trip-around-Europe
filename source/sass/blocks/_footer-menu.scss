@@ -42,6 +42,12 @@
       padding-top: 30px;
     }
   }
+
+  @media (max-width: $mobile-width) {
+    border-right: none;
+    width: 320px;
+    text-align: center;
+  }
 }
 
 .footer-menu__title {
