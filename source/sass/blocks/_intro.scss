@@ -7,13 +7,26 @@
   //background-size: 1920px 860px; //443px 1089px;
   //background-position: 50% 62%;
   background-color: $light-blue;
+  //width: 1920px;
+  background-size: cover;
 
   @media (max-width: $tablet-width) {
     background-image: url("../img/header-greece-tablet.jpg");
+    //background-size: 100%;
+    background-size: 1023px 344px;
+    background-position: top center;
+    max-height: 344px;
   }
 
   @media (max-width: $mobile-width) {
+    background-color: $white;
     background-image: url("../img/header-greece-mobile.jpg");
+    //background-size: 320px 235px;
+    background-size: 100% 100%;
+    //width: 100%;
+    //background-size: 1023px 344px;
+    max-height: 235px;
+    //height: 433px;
   }
 }
 
@@ -24,8 +37,21 @@
   margin-left: 1075px;
 
   @media (max-width: $tablet-width) {
+    //margin: 0;
     width: 398px;
-    padding: 60px 185px 83px 185px;
+    //padding: 60px 185px 83px 185px;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 60px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 320px;
+    padding: 81px 16px 108px 16px;
+  }
+
+  @media (max-width: $tablet-width) {
+    //background-color: $white;
   }
 }
 
@@ -35,6 +61,16 @@
   font-size: 55px;
   font-weight: 600;
   line-height: 80px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 24px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 24px;
+    letter-spacing: 0;
+  }
 }
 
 .intro__about {
@@ -42,4 +78,42 @@
   font-size: 16px;
   line-height: 27.2px;
   letter-spacing: 0.47px;
+  margin-bottom: 39px;
+
+  @media (max-width: $mobile-width) {
+    margin-top: 130px;
+    color: $dark;
+  }
 }
+
+.intro.intro__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+/*
+.intro.intro__button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+  }
+
+  @media (max-width: $mobile-width) {
+    z-index: 1;
+  }
+}
+*/

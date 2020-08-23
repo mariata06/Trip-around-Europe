@@ -12,7 +12,6 @@ var tabItem = function () {
     item.addEventListener('click', toggleTabItem)
   })
 
-
   function toggleTabItem() {
     tabMenu.forEach(function (item) {
       item.classList.remove("places__choice-country--active")

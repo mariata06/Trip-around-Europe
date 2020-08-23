@@ -7,10 +7,29 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: $white;
+
+  @media (max-width: $tablet-width) {
+    padding: 112px 21px 125px 21px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 0;
+  }
 }
 
 .prices__rates {
   width: 370px;
   border: 1px solid rgba(20, 21, 23, 0.3);
   padding: 40px 30px 30px 30px;
+  border-radius: 3px;
+
+  @media (max-width: $tablet-width) {
+    padding: 30px 0 0 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
 }

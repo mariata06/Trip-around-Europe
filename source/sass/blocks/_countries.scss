@@ -2,6 +2,17 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+
+  @media (max-width: $tablet-width) {
+    justify-content: space-between;
+    padding-left: 82px;
+    padding-right: 82px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .countries__item {
@@ -29,6 +40,14 @@
     height: 100%;
     background-color: rgba(20, 21, 23, 0.6);
     z-index: 1;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 29px;
+
+    &:last-child {
+      align-self: start;
+    }
   }
 }
 
@@ -77,10 +96,18 @@
     display: flex;
     flex-wrap: wrap;
   }
+
+  @media (max-width: $tablet-width) {
+    position: offset-position;
+  }
 }
 
 .countries__card-description {
   width: 470px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+  }
 }
 
 .countries__card-title {
@@ -88,6 +115,28 @@
   font-weight: 600;
   line-height: 90px;
   margin: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 2.92px;
+    width: 175px;
+    background-color: $salmon-pink;
+    left: 0;
+    top: 90px;
+
+    @media (max-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 24px;
+    text-align: center;
+  }
 }
 
 .countries__card-about {
@@ -96,6 +145,24 @@
   letter-spacing: 0.47px;
   line-height: 28px;
   margin-bottom: 50px;
+
+  @media (max-width: $tablet-width) {
+    //width: 100%;
+    min-width: 726px;
+    //padding-right: 13px;
+    //padding-left: 13px;
+    padding-right: 0;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 16px;
+    padding-right: 16px;
+    //width: 100%;
+    //width: 320px;
+    min-width: auto;
+  }
 }
 
 .countries__review {
@@ -106,6 +173,21 @@
   top: 114px;
   right: 0;
   position: absolute;
+
+  @media (max-width: $tablet-width) {
+    //max-width: 100%;
+    top: unset;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding-right: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 268px;
+    bottom: -50px;
+    padding: 20px;
+  }
 }
 
 .countries__review-title {
@@ -113,16 +195,45 @@
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0.69px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    height: 0.73px;
+    width: 68px;
+    background-color: $salmon-pink;
+    left: 0;
+    top: 40px;
+
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+    text-align: center;
+  }
 }
 
 .countries__review-author {
   margin-right: 15.81px;
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 10px;
+  }
 }
 
 .countries__author-name {
   display: flex;
   align-items: center;
   margin-bottom: 0;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .countries__review-text {
@@ -131,4 +242,25 @@
   letter-spacing: 0.41px;
   line-height: 28px;
   font-size: 14px;
+  margin-top: 32px;
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+  }
 }
+
+.countries__card-button {
+  @media (max-width: $tablet-width) {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}
+
+/*
+.countries__card-img {
+  @media (max-width: $tablet-width) {
+    position: relative;
+  }
+}
+*/

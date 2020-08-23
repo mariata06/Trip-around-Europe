@@ -3,6 +3,14 @@
   padding-left: 375px;
   padding-right: 375px;
   background-color: $white;
+
+  @media (max-width: $tablet-width) {
+    padding: 80px 0 0 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 300px;
+  }
 }
 
 .places__title {
@@ -11,6 +19,18 @@
   font-size: 55px;
   font-weight: 600;
   line-height: 80px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 30px;
+    line-height: 24px;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 24px;
+  }
 }
 
 .places__about {
@@ -20,6 +40,19 @@
   letter-spacing: 0.47px;
   margin: 0;
   margin-bottom: 56px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    padding-left: 175px;
+    padding-right: 175px;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .places__choice {
@@ -27,14 +60,35 @@
   display: flex;
   border-bottom: 1px solid rgba(20, 21, 23, 0.3);
   margin-bottom: 95px;
+
+  @media (max-width: $tablet-width) {
+    width: auto;
+    justify-content: space-between;
+    margin-top: 69px;
+    margin-bottom: 33px;
+    margin-left: 37px;
+    margin-right: 37px;
+  }
+
+  @media (max-width: $mobile-width) {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 11px;
+  }
 }
 
 .places__choice-country {
   margin-right: 99px;
   cursor: pointer;
+  font-size: 20px;
+  font-weight: 500;
 
   &--active {
     color: $salmon-pink;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-right: 0;
   }
 }
 

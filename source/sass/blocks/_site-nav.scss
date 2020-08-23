@@ -5,7 +5,9 @@
   justify-content: space-between;
 
   @media (max-width: $tablet-width) {
-    width: 747px;
+    //width: 747px;
+    width: 100%;
+    align-items: baseline;
   }
 }
 
@@ -24,7 +26,7 @@
 }
 
 .site-nav__logo {
-  margin-right: 623px;
+  margin-right: auto;//623px;
 }
 
 .site-nav__list {

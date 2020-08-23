@@ -36,7 +36,7 @@
   <div class="page-wrapper">
 
     <header class="page-header">
-      <nav class="page-header__site-nav site-nav">
+      <nav class="page-header__site-nav site-nav mobile-menu">
         <div class="site-nav__logo">
           <picture>
             <source srcset="img/logo-tablet.svg" media="(max-width: 1023px)">
@@ -89,31 +89,65 @@
         <h2 class="places__title">Места посещения</h2>
         <p class="places__about">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
         <div class="places__countries countries">
-          <div class="countries__item">
-            <img class="countries__img" src="img/greece-desktop.jpg" width="350" height="430" alt="Греция">
-            <button class="countries__button">Смотреть подробнее</button>
-            <div class="countries__title">Греция</div>
-          </div>
-          <div class="countries__item">
-            <img class="countries__img" src="img/albania-desktop.jpg" width="350" height="430" alt="Албания">
-            <button class="countries__button">Смотреть подробнее</button>
-            <div class="countries__title">Албания</div>
-          </div>
-          <div class="countries__item">
-            <img class="countries__img" src="img/macedonia-desktop.jpg" width="350" height="430" alt="Македония">
-            <button class="countries__button">Смотреть подробнее</button>
-            <div class="countries__title">Македония</div>
-          </div>
-          <div class="countries__item">
-            <img class="countries__img" src="img/montenegro-desktop.jpg" width="350" height="430" alt="Черногория">
-            <button class="countries__button">Смотреть подробнее</button>
-            <div class="countries__title">Черногория</div>
-          </div>
-          <div class="countries__item">
-            <img class="countries__img" src="img/croatia-desktop.jpg" width="350" height="430" alt="Хорватия">
-            <button class="countries__button">Смотреть подробнее</button>
-            <div class="countries__title">Хорватия</div>
-          </div>
+          <a href="#greece">
+            <div class="countries__item countries__item--active" data-tab-name="greece">
+              <picture>
+                <source srcset="img/greece-tablet.jpg" media="(max-width: 767px)">
+                <source srcset="img/greece-tablet.jpg" media="(max-width: 1023px)">
+                <img class="countries__img" src="img/greece-desktop.jpg" alt="Греция">
+              </picture>
+              <button class="countries__button">Смотреть подробнее</button>
+              <div class="countries__title">Греция</div>
+            </div>
+          </a>
+
+          <a href="#albania">
+            <div class="countries__item" data-tab-name="albania">
+              <picture>
+                <source srcset="img/albania-tablet.jpg" media="(max-width: 767px)">
+                <source srcset="img/albania-tablet.jpg" media="(max-width: 1023px)">
+                <img class="countries__img" src="img/albania-desktop.jpg" alt="Албания">
+              </picture>
+              <button class="countries__button">Смотреть подробнее</button>
+              <div class="countries__title">Албания</div>
+            </div>
+          </a>
+
+          <a href="#macedonia">
+            <div class="countries__item" data-tab-name="macedonia">
+              <picture>
+                <source srcset="img/macedonia-tablet.jpg" media="(max-width: 767px)">
+                <source srcset="img/macedonia-tablet.jpg" media="(max-width: 1023px)">
+                <img class="countries__img" src="img/macedonia-desktop.jpg" alt="Македония">
+              </picture>
+              <button class="countries__button">Смотреть подробнее</button>
+              <div class="countries__title">Македония</div>
+            </div>
+          </a>
+
+          <a href="#montenegro">
+            <div class="countries__item" data-tab-name="montenegro">
+              <picture>
+                <source srcset="img/montenegro-tablet.jpg" media="(max-width: 767px)">
+                <source srcset="img/montenegro-tablet.jpg" media="(max-width: 1023px)">
+                <img class="countries__img" src="img/montenegro-desktop.jpg" alt="Черногория">
+              </picture>
+              <button class="countries__button">Смотреть подробнее</button>
+              <div class="countries__title">Черногория</div>
+            </div>
+          </a>
+
+          <a href="#croatia">
+            <div class="countries__item" data-tab-name="croatia">
+              <picture>
+                <source srcset="img/croatia-tablet.jpg" media="(max-width: 767px)">
+                <source srcset="img/croatia-tablet.jpg" media="(max-width: 1023px)">
+                <img class="countries__img" src="img/croatia-desktop.jpg" alt="Хорватия">
+              </picture>
+              <button class="countries__button">Смотреть подробнее</button>
+              <div class="countries__title">Хорватия</div>
+            </div>
+          </a>
         </div>
         <!--
           <div class="places__choice">
@@ -132,7 +166,7 @@
           <p class="places__choice-country" data-tab-name="montenegro">Черногория</p>
           <p class="places__choice-country" data-tab-name="croatia">Хорватия</p>
         </div>
-        <div class="countries__card greece countries__card--active" id="greece" >
+        <div class="countries__card greece countries__card--active" id="greece">
           <div class="countries__card-description">
             <h3 class="countries__card-title">Греция</h3>
             <p class="countries__card-about">На севере Греции находится один из крупнейших комплексов монастырей,
@@ -142,7 +176,11 @@
               царящая в монастырях Метеоры.</p>
             <button class="countries__card-button button" type="button">Купить тур сейчас</button>
           </div>
-          <img class="countries__card-img" src="img/greece-card-desktop.jpg" width="430" height="596" alt="Греция">
+          <picture>
+            <source srcset="img/greece-card-mobile.jpg" media="(max-width: 767px)">
+            <source srcset="img/greece-card-tablet.jpg" media="(max-width: 1023px)">
+            <img class="countries__card-img" src="img/greece-card-desktop.jpg" alt="Греция">
+          </picture>
           <div class="countries__review">
             <h4 class="countries__review-title">Отзывы</h4>
             <p class="countries__review-text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же
@@ -164,7 +202,11 @@
               перетёртые до такого мелкого состояния.</p>
             <button class="countries__card-button button" type="button">Купить тур сейчас</button>
           </div>
-          <img class="countries__card-img" src="img/albania-card-desktop.jpg" width="430" height="596" alt="Албания">
+          <picture>
+            <source srcset="img/albania-card-mobile.jpg" media="(max-width: 767px)">
+            <source srcset="img/albania-card-tablet.jpg" media="(max-width: 1023px)">
+            <img class="countries__card-img" src="img/albania-card-desktop.jpg" width="430" height="596" alt="Албания">
+          </picture>
           <div class="countries__review">
             <h4 class="countries__review-title">Отзывы</h4>
             <p class="countries__review-text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с
@@ -182,8 +224,12 @@
               на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.</p>
             <button class="countries__card-button button" type="button">Купить тур сейчас</button>
           </div>
-          <img class="countries__card-img" src="img/macedonia-card-desktop.jpg" width="430" height="596"
-            alt="Македония">
+          <picture>
+            <source srcset="img/macedonia-card-mobile.jpg" media="(max-width: 767px)">
+            <source srcset="img/macedonia-card-tablet.jpg" media="(max-width: 1023px)">
+            <img class="countries__card-img" src="img/macedonia-card-desktop.jpg" width="430" height="596"
+              alt="Македония">
+          </picture>
           <div class="countries__review">
             <h4 class="countries__review-title">Отзывы</h4>
             <p class="countries__review-text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но
@@ -202,8 +248,12 @@
               каньона составляет 80 км.</p>
             <button class="countries__card-button button" type="button">Купить тур сейчас</button>
           </div>
-          <img class="countries__card-img" src="img/montenegro-card-desktop.jpg" width="430" height="596"
-            alt="Черногория">
+          <picture>
+            <source srcset="img/montenegro-card-mobile.jpg" media="(max-width: 767px)">
+            <source srcset="img/montenegro-card-tablet.jpg" media="(max-width: 1023px)">
+            <img class="countries__card-img" src="img/montenegro-card-desktop.jpg" width="430" height="596"
+              alt="Черногория">
+          </picture>
           <div class="countries__review">
             <h4 class="countries__review-title">Отзывы</h4>
             <p class="countries__review-text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что
@@ -221,7 +271,11 @@
               нерукотворными скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
             <button class="countries__card-button button" type="button">Купить тур сейчас</button>
           </div>
-          <img class="countries__card-img" src="img/croatia-card-desktop.jpg" width="430" height="596" alt="Хорватия">
+          <picture>
+            <source srcset="img/croatia-card-mobile.jpg" media="(max-width: 767px)">
+            <source srcset="img/croatia-card-tablet.jpg" media="(max-width: 1023px)">
+            <img class="countries__card-img" src="img/croatia-card-desktop.jpg" width="430" height="596" alt="Хорватия">
+          </picture>
           <div class="countries__review">
             <h4 class="countries__review-title">Отзывы</h4>
             <p class="countries__review-text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема!
@@ -266,7 +320,8 @@
           <p class="rate-info__contact">Свяжитесь с нами</p>
           <p class="rate-info__phone">
             <img src="img/phone.svg" width="30" height="30" alt="контактный телефон" class="rate-info__icon">
-            <a href="tel:+749978468446" class="rate-info__link rate-info__link--phone" aria-label="Позвонить">+7
+            <a href="tel:+749978468446" class="rate-info__link rate-info__link--active rate-info__link--phone"
+              aria-label="Позвонить">+7
               (499)-784-684-46</a>
           </p>
         </div>
@@ -281,12 +336,12 @@
               <p class="form__paragraph">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
               <div class="form__input-container">
                 <div tabindex="0" class="form__phone">
-                  <input id="phone" type="tel" class="form__input form__input--phone"
-                    name="phonenumber" value="" required placeholder="+7 Введите 10 цифр номера">
+                  <input id="phone" type="tel" class="form__input form__input--phone" name="phonenumber" value=""
+                    required placeholder="+7 Введите 10 цифр номера">
                 </div>
                 <div tabindex="0" class="form__email">
-                  <input id="email" type="email" class="form__input form__input--email"
-                    name="email" value="" required placeholder="E-mail">
+                  <input id="email" type="email" class="form__input form__input--email" name="email" value="" required
+                    placeholder="E-mail">
                 </div>
               </div>
               <button type="submit" class="form__button button">Отправить</button>
