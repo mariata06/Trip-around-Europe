@@ -1,5 +1,5 @@
 .site-nav {
-  width: 1170px;
+  //width: 1170px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -9,24 +9,48 @@
     width: 100%;
     align-items: baseline;
   }
+
+  @media (max-width: $mobile-width) {
+    width: 320px;
+    flex-direction: column-reverse;
+
+    &--hide {
+      display: none;
+    }
+
+    &--show {
+      display: block;
+      min-height: 568px;
+    }
+  }
 }
 
 .site-nav__close {
   display: none;
-}
+  border: none;
+  background-color: transparent;
 
-.site-nav__mobile-menu {
-  display: none;
-
-  @media (max-width: $tablet-width) {
-    display: block;
-    background-color: $salmon-pink;
-    margin-left: auto;
+  &--nojs {
+    display: none;
   }
-}
 
-.site-nav__logo {
-  margin-right: auto;//623px;
+  &--hide {
+    display: none;
+  }
+
+  &--show {
+    display: block;
+  }
+
+  @media (max-width: $mobile-width) {
+    display: block;
+    align-self: flex-end;
+    margin-bottom: 82px;
+    margin-left: auto;
+    margin-top: 15px;
+    margin-right: 15px;
+    padding: 0;
+  }
 }
 
 .site-nav__list {
@@ -38,15 +62,46 @@
   @media (max-width: $tablet-width) {
     display: none;
   }
+
+  @media (max-width: $mobile-width) {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
 }
 
 .site-nav__list-item {
   display: inline-block;
+  margin-right: 40px;
+  position: relative;
+
+  @media (max-width: $mobile-width) {
+    min-height: 60px;
+    background-color: $light;
+    //background-color: green;
+    width: 100%;
+    margin-right: 0;
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+
+    &::after {
+      content: url("../img/arrow-right.svg");
+      position: absolute;
+      display: block;
+      right: 10px;
+      top: 20px;
+    }
+  }
 
   &--phone {
-    margin-left: 53px;
+    //margin-left: 53px;
     display: flex;
     align-items: center;
+
+    @media (max-width: $mobile-width) {
+      display: none;
+    }
   }
 }
 
@@ -58,11 +113,21 @@
 
   &--active {
     color: $very-dark;
-    margin-right: 40px;
+
+    @media (max-width: $mobile-width) {
+      color: $dark;
+    }
   }
 
   &--phone {
     font-size: 18px;
     font-weight: 400;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 22.4px;
+    display: block;
   }
 }

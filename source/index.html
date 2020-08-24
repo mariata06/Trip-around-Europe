@@ -13,15 +13,13 @@
   <link rel="preload" href="css/style.min.css" as="style">
   <!--<link rel="preload" href="js/menu.min.js" as="script">-->
   <link rel="stylesheet" href="css/style.min.css">
-  <!--
-<script>
+  <script>
     // Picture element HTML5 shiv
     document.createElement("picture");
 
   </script>
   <script src="js/picturefill.min.js" async=""></script>
   <script src="js/svg4everybody.min.js" async=""></script>
-  -->
 
 </head>
 
@@ -36,20 +34,24 @@
   <div class="page-wrapper">
 
     <header class="page-header">
-      <nav class="page-header__site-nav site-nav mobile-menu">
-        <div class="site-nav__logo">
-          <picture>
-            <source srcset="img/logo-tablet.svg" media="(max-width: 1023px)">
-            <img src="img/logo-desktop.svg" width="57" height="22" alt="Логотип сайта Путешествие по европе"
-              class="site-nav__logo-img">
-          </picture>
-        </div>
+      <div class="page-header__logo">
+        <picture>
+          <source srcset="img/logo-tablet.svg" media="(max-width: 767px)">
+          <source srcset="img/logo-tablet.svg" media="(max-width: 1023px)">
+          <img src="img/logo-desktop.svg" width="57" height="22" alt="Логотип сайта Путешествие по европе"
+            class="page-header__logo-img">
+        </picture>
+      </div>
+      <nav class="page-header__site-nav site-nav">
+        <button type="button" class="site-nav__close site-nav__close--nojs">
+          <img src="img/cross.svg" width="23" height="22" alt="Закрыть меню">
+        </button>
         <ul class="site-nav__list">
           <li class="site-nav__list-item">
-            <a href="index.html" class="site-nav__list-link site-nav__list-link--active">О путешествии</a>
+            <a href="#places" class="site-nav__list-link site-nav__list-link--active">О путешествии</a>
           </li>
           <li class="site-nav__list-item">
-            <a href="prices.html" class="site-nav__list-link">Цены</a>
+            <a href="#prices" class="site-nav__list-link">Цены</a>
           </li>
           <li class="site-nav__list-item site-nav__list-item--phone">
             <img src="img/phone.svg" width="30" height="30" alt="контактный телефон" class="site-nav__icon">
@@ -57,15 +59,12 @@
               (499)-784-684-46</a>
           </li>
         </ul>
-        <button type="button" class="site-nav__close site-nav__close--nojs">
-          <img src="img/cross.svg" width="23" height="22" alt="Закрыть меню">
-        </button>
-        <div class="site-nav__mobile-menu burger-menu">
-          <button class="burger-menu burger-menu--nojs">
-            <img src="img/menu.svg" width="30" height="30" alt="Мобильное меню" class="burger-menu__button">
-          </button>
-        </div>
       </nav>
+      <div class="page-header__mobile-menu page-header__mobile-menu--nojs burger-menu">
+        <button class="burger-menu">
+          <img src="img/menu.svg" width="30" height="30" alt="Мобильное меню" class="burger-menu__button">
+        </button>
+      </div>
     </header>
 
     <main class="page-main">
@@ -79,13 +78,14 @@
             природы.
           </p>
           <button class="intro__button button" type="button">
-            Cмотреть тур
-            <img class="button__icon" src="img/arrow-down.svg" width="16" height="16" alt="Смотреть тур">
+            <a href="#places__choice" class="intro__button button">Cмотреть тур
+              <img class="button__icon" src="img/arrow-down.svg" width="16" height="16" alt="Смотреть тур">
+            </a>
           </button>
         </div>
       </section>
 
-      <section class="places">
+      <section class="places" id="places">
         <h2 class="places__title">Места посещения</h2>
         <p class="places__about">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
         <div class="places__countries countries">
@@ -149,17 +149,7 @@
             </div>
           </a>
         </div>
-        <!--
-          <div class="places__choice">
-          <p class="places__choice-country places__choice-country--active" data-tab-name="greece"><a class="places__choice-country-link places__choice-country-link--active"
-              href="#">Греция</a></p>
-          <p class="places__choice-country" data-tab-name="albania"><a class="places__choice-country-link" href="#">Албания</a></p>
-          <p class="places__choice-country" data-tab-name="macedonia"><a class="places__choice-country-link" href="#">Македония</a></p>
-          <p class="places__choice-country" data-tab-name="montenegro"><a class="places__choice-country-link" href="#">Черногория</a></p>
-          <p class="places__choice-country" data-tab-name="croatia"><a class="places__choice-country-link" href="#">Хорватия</a></p>
-        </div>
-        -->
-        <div class="places__choice">
+        <div class="places__choice" id="places__choice">
           <p class="places__choice-country places__choice-country--active" data-tab-name="greece">Греция</p>
           <p class="places__choice-country" data-tab-name="albania">Албания</p>
           <p class="places__choice-country" data-tab-name="macedonia">Македония</p>
@@ -174,7 +164,7 @@
               монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной
               горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера,
               царящая в монастырях Метеоры.</p>
-            <button class="countries__card-button button" type="button">Купить тур сейчас</button>
+            <button class="countries__card-button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
             <source srcset="img/greece-card-mobile.jpg" media="(max-width: 767px)">
@@ -200,7 +190,7 @@
               водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно
               белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни,
               перетёртые до такого мелкого состояния.</p>
-            <button class="countries__card-button button" type="button">Купить тур сейчас</button>
+            <button class="countries__card-button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
             <source srcset="img/albania-card-mobile.jpg" media="(max-width: 767px)">
@@ -222,7 +212,7 @@
             <p class="countries__card-about">В Македонии нашей целью будет посетить Палаошник, который расположился в
               удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся
               на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.</p>
-            <button class="countries__card-button button" type="button">Купить тур сейчас</button>
+            <button class="countries__card-button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
             <source srcset="img/macedonia-card-mobile.jpg" media="(max-width: 767px)">
@@ -246,7 +236,7 @@
             <p class="countries__card-about">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в
               некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина
               каньона составляет 80 км.</p>
-            <button class="countries__card-button button" type="button">Купить тур сейчас</button>
+            <button class="countries__card-button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
             <source srcset="img/montenegro-card-mobile.jpg" media="(max-width: 767px)">
@@ -269,7 +259,7 @@
             <p class="countries__card-about">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный
               мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными
               нерукотворными скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
-            <button class="countries__card-button button" type="button">Купить тур сейчас</button>
+            <button class="countries__card-button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
             <source srcset="img/croatia-card-mobile.jpg" media="(max-width: 767px)">
@@ -288,7 +278,7 @@
         </div>
       </section>
 
-      <section class="prices">
+      <section class="prices" id="prices">
         <div class="prices__rates rate rate--active rate--complex">
           <h4 class="rate__title">Комплексный&nbsp;<span class="rate__amount">$1999</span></h4>
           <p class="rate__paragraph">Ознакомьтесь с перечнем того, что входит в данный пакет </p>
@@ -298,7 +288,7 @@
             <li class="rate__option-item">Завтраки, ужины в отелях и ланчи на природе</li>
             <li class="rate__option-item">Экскурсии по удивительно красивым местам Европы</li>
           </ul>
-          <button class="rate__button button">купить тур сейчас</button>
+          <button class="rate__button button button--buy-tour">купить тур сейчас</button>
         </div>
         <div class="prices__rates rate rate--budget">
           <h4 class="rate__title">Экономный&nbsp;<span class="rate__amount">$1399</span></h4>
@@ -310,7 +300,7 @@
             <li class="rate__option-item">Только завтраки в отелях</li>
             <li class="rate__option-item">Экскурсии по удивительно красивым местам Европы</li>
           </ul>
-          <button class="rate__button button">купить тур сейчас</button>
+          <button class="rate__button button button--buy-tour">купить тур сейчас</button>
         </div>
         <div class="prices__rates rate-info">
           <h4 class="rate-info__title">Цены</h4>
@@ -344,7 +334,7 @@
                     placeholder="E-mail">
                 </div>
               </div>
-              <button type="submit" class="form__button button">Отправить</button>
+              <button type="submit" class="form__button form__button--feedback button">Отправить</button>
             </div>
           </form>
         </div>
@@ -421,9 +411,49 @@
 
   </div>
 
+  <section class="popup popup--tour">
+    <h2 class="visually-hidden">Модальное окно "Купить тур"</h2>
+    <div class="popup__content">
+      <form action="https://echo.htmlacademy.ru" method="post">
+        <div class="popup__form form form--tour">
+          <h3 class="form__title">Купить тур</h3>
+          <div class="form__input-container">
+            <div tabindex="0" class="form__phone">
+              <input id="phone" type="tel" class="form__input form__input--phone" name="phonenumber" value="" required
+                placeholder="+7 Введите 10 цифр номера">
+            </div>
+            <div tabindex="0" class="form__email">
+              <input id="email" type="email" class="form__input form__input--email" name="email" value="" required
+                placeholder="E-mail">
+            </div>
+          </div>
+          <button type="submit" class="form__button button">Отправить</button>
+          <button type="button" class="form__close form__close--tour close">
+            <img src="img/cross.svg" width="23" height="22" alt="Закрыть окно">
+          </button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <section class="popup popup--success">
+    <h2 class="visually-hidden">Модальное окно "Форма успешно отправлена"</h2>
+    <div class="popup__content">
+      <h3 class="popup__title">Форма успешно отправлена, спасибо! :)</h3>
+      <button type="button" class="popup__button close">
+        <img src="img/cross.svg" width="23" height="22" alt="Закрыть окно">
+      </button>
+    </div>
+  </section>
+
   <!--<script src="js/menu.min.js"></script>-->
   <!--<script src="js/svgxuse.js" defer></script>-->
+  <script src="js/navigation.js"></script>
+  <script src="js/menu.js"></script>
+  <script src="js/validation.js"></script>
   <script src="js/tabs.js"></script>
+  <script src="js/svgxuse.js" defer></script>
+  <script src="js/popupTour.js" defer></script>
 
 </body>
 
