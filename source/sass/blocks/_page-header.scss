@@ -28,14 +28,36 @@
   margin-right: auto;//623px;
 
   @media (max-width: $tablet-width) {
+    //display: none;
     display: block;
 
-    &--hide {
+    &--nojs {
       display: none;
     }
 
     &--show {
       display: block;
+    }
+
+    &--hide {
+      display: none;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    //display: none;
+    display: block;
+
+    &--nojs {
+      display: none;
+    }
+
+    &--show {
+      display: block;
+    }
+
+    &--hide {
+      display: none;
     }
   }
 }
@@ -47,6 +69,18 @@
     display: block;
     background-color: $salmon-pink;
     margin-left: auto;
+
+    &--nojs {
+      display: none;
+    }
+
+    &--show {
+      display: block;
+    }
+
+    &--hide {
+      display: none;
+    }
   }
 
   @media (max-width: $mobile-width) {

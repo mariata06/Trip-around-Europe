@@ -22,15 +22,12 @@ html {
 
 body {
   margin: 0 auto;
-  //padding: 0 25px;
-
   font-family: "Montserrat", "Arial", sans-serif;
   font-size: 16px;
   line-height: 22px;
   font-weight: 400;
   color: $dark;
   background-color: $grey;
-  //min-width: 320px;
 }
 
 ul {
@@ -46,43 +43,3 @@ a {
   text-decoration: none;
   color: $very-dark;
 }
-
-/*
-.main {
-  width: 1920px;
-  margin: 0 auto;
-  //background-color: $color-blue-black;
-
-  @media (min-width: 768px) {
-    width: 768px;
-    //padding: 0 40px;
-  }
-
-  @media (min-width: 320px) {
-    width: 320px;
-    //padding: 0 60px;
-  }
-
-  .container {
-    padding: 0;
-    background-color: transparent;
-  }
-}
-*/
-
-/*
-.catalog-main,
-.form-main {
-  //width: 320px;
-  //margin: 0 auto;
-  //background-color: $color-pale-grey;
-}
-
-.catalog-main {
-  @media (min-width: $desktop-width) {
-    //display: flex;
-    //flex-direction: column-reverse;
-    //flex-direction: column;
-  }
-}
-*/

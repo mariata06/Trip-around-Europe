@@ -8,8 +8,8 @@ var closePopupBuyTour = document.querySelector(".form__close--tour");
 
 var overlay = document.querySelector(".popup");
 
-buttonsBuy.forEach(buton => {
-  buton.addEventListener("click", function (evt) {
+buttonsBuy.forEach(function (btn) {
+  btn.addEventListener("click", function (evt) {
     evt.preventDefault();
     popupBuyTour.classList.remove("popup--tour--hide");
     popupBuyTour.classList.add("popup--tour--show");

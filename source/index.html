@@ -11,7 +11,7 @@
   <link rel="preload" href="fonts/montserrat-bold.woff2" as="font">
   <link rel="preload" href="fonts/montserrat-semibold.woff2" as="font">
   <link rel="preload" href="css/style.min.css" as="style">
-  <!--<link rel="preload" href="js/menu.min.js" as="script">-->
+  <link rel="preload" href="js/menu.min.js" as="script">
   <link rel="stylesheet" href="css/style.min.css">
   <script>
     // Picture element HTML5 shiv
@@ -34,7 +34,7 @@
   <div class="page-wrapper">
 
     <header class="page-header">
-      <div class="page-header__logo">
+      <div class="page-header__logo page-header__logo--nojs">
         <picture>
           <source srcset="img/logo-tablet.svg" media="(max-width: 767px)">
           <source srcset="img/logo-tablet.svg" media="(max-width: 1023px)">
@@ -90,9 +90,10 @@
           <a href="#greece">
             <div class="countries__item countries__item--active" data-tab-name="greece">
               <picture>
-                <source srcset="img/greece-tablet.jpg" media="(max-width: 767px)">
-                <source srcset="img/greece-tablet.jpg" media="(max-width: 1023px)">
-                <img class="countries__img" src="img/greece-desktop.jpg" alt="Греция">
+                <source srcset="img/greece-tablet@1x.jpg 1x, img/greece-tablet@2x.jpg 2x" media="(max-width: 767px)">
+                <source srcset="img/greece-tablet@1x.jpg 1x, img/greece-tablet@2x.jpg 2x" media="(max-width: 1023px)">
+                <img class="countries__img" src="img/greece-desktop@1x.jpg" srcset="img/greece-desktop@2x.jpg 2x"
+                  alt="Греция">
               </picture>
               <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Греция</div>
@@ -102,9 +103,10 @@
           <a href="#albania">
             <div class="countries__item" data-tab-name="albania">
               <picture>
-                <source srcset="img/albania-tablet.jpg" media="(max-width: 767px)">
-                <source srcset="img/albania-tablet.jpg" media="(max-width: 1023px)">
-                <img class="countries__img" src="img/albania-desktop.jpg" alt="Албания">
+                <source srcset="img/albania-tablet@1x.jpg 1x, img/albania-tablet@2x.jpg 2x" media="(max-width: 767px)">
+                <source srcset="img/albania-tablet@1x.jpg 1x, img/albania-tablet@2x.jpg 2x" media="(max-width: 1023px)">
+                <img class="countries__img" src="img/albania-desktop@1x.jpg" srcset="img/albania-desktop@2x.jpg 2x"
+                  alt="Албания">
               </picture>
               <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Албания</div>
@@ -114,9 +116,12 @@
           <a href="#macedonia">
             <div class="countries__item" data-tab-name="macedonia">
               <picture>
-                <source srcset="img/macedonia-tablet.jpg" media="(max-width: 767px)">
-                <source srcset="img/macedonia-tablet.jpg" media="(max-width: 1023px)">
-                <img class="countries__img" src="img/macedonia-desktop.jpg" alt="Македония">
+                <source srcset="img/macedonia-tablet@1x.jpg 1x, img/macedonia-tablet@2x.jpg 2x"
+                  media="(max-width: 767px)">
+                <source srcset="img/macedonia-tablet@1x.jpg 1x, img/macedonia-tablet@2x.jpg 2x"
+                  media="(max-width: 1023px)">
+                <img class="countries__img" src="img/macedonia-desktop@1x.jpg" srcset="img/macedonia-desktop@2x.jpg 2x"
+                  alt="Македония">
               </picture>
               <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Македония</div>
@@ -126,9 +131,12 @@
           <a href="#montenegro">
             <div class="countries__item" data-tab-name="montenegro">
               <picture>
-                <source srcset="img/montenegro-tablet.jpg" media="(max-width: 767px)">
-                <source srcset="img/montenegro-tablet.jpg" media="(max-width: 1023px)">
-                <img class="countries__img" src="img/montenegro-desktop.jpg" alt="Черногория">
+                <source srcset="img/montenegro-tablet@1x.jpg 1x, img/montenegro-tablet@2x.jpg 2x"
+                  media="(max-width: 767px)">
+                <source srcset="img/montenegro-tablet@1x.jpg 1x, img/montenegro-tablet@2x.jpg 2x"
+                  media="(max-width: 1023px)">
+                <img class="countries__img" src="img/montenegro-desktop@1x.jpg"
+                  srcset="img/montenegro-desktop@2x.jpg 2x" alt="Черногория">
               </picture>
               <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Черногория</div>
@@ -138,9 +146,10 @@
           <a href="#croatia">
             <div class="countries__item" data-tab-name="croatia">
               <picture>
-                <source srcset="img/croatia-tablet.jpg" media="(max-width: 767px)">
-                <source srcset="img/croatia-tablet.jpg" media="(max-width: 1023px)">
-                <img class="countries__img" src="img/croatia-desktop.jpg" alt="Хорватия">
+                <source srcset="img/croatia-tablet@1x.jpg 1x, img/croatia-tablet@2x.jpg 2x" media="(max-width: 767px)">
+                <source srcset="img/croatia-tablet@1x.jpg 1x, img/croatia-tablet@2x.jpg 2x" media="(max-width: 1023px)">
+                <img class="countries__img" src="img/croatia-desktop@1x.jpg" srcset="img/croatia-desktop@2x.jpg 2x"
+                  alt="Хорватия">
               </picture>
               <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Хорватия</div>
@@ -166,9 +175,12 @@
             <button class="card__button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
-            <source srcset="img/greece-card-mobile.jpg" media="(max-width: 767px)">
-            <source srcset="img/greece-card-tablet.jpg" media="(max-width: 1023px)">
-            <img class="card__img" src="img/greece-card-desktop.jpg" alt="Греция">
+            <source srcset="img/greece-card-mobile@1x.jpg 1x, img/greece-card-mobile@2x.jpg 2x"
+              media="(max-width: 767px)">
+            <source srcset="img/greece-card-tablet@1x.jpg 1x, img/greece-card-tablet@2x.jpg 2x"
+              media="(max-width: 1023px)">
+            <img class="card__img" src="img/greece-card-desktop@1x.jpg" srcset="img/greece-card-desktop@2x.jpg 2x"
+              alt="Греция">
           </picture>
           <div class="card__review">
             <h4 class="card__review-title">Отзывы</h4>
@@ -193,9 +205,12 @@
             <button class="card__button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
-            <source srcset="img/albania-card-mobile.jpg" media="(max-width: 767px)">
-            <source srcset="img/albania-card-tablet.jpg" media="(max-width: 1023px)">
-            <img class="card__img" src="img/albania-card-desktop.jpg" width="430" height="596" alt="Албания">
+            <source srcset="img/albania-card-mobile@1x.jpg 1x, img/albania-card-mobile@2x.jpg 2x"
+              media="(max-width: 767px)">
+            <source srcset="img/albania-card-tablet@1x.jpg 1x, img/albania-card-tablet@2x.jpg 2x"
+              media="(max-width: 1023px)">
+            <img class="card__img" src="img/albania-card-desktop@1x.jpg" srcset="img/albania-card-desktop@2x.jpg 2x"
+              width="430" height="596" alt="Албания">
           </picture>
           <div class="card__review">
             <h4 class="card__review-title">Отзывы</h4>
@@ -216,10 +231,12 @@
             <button class="card__button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
-            <source srcset="img/macedonia-card-mobile.jpg" media="(max-width: 767px)">
-            <source srcset="img/macedonia-card-tablet.jpg" media="(max-width: 1023px)">
-            <img class="card__img" src="img/macedonia-card-desktop.jpg" width="430" height="596"
-              alt="Македония">
+            <source srcset="img/macedonia-card-mobile@1x.jpg 1x, img/macedonia-card-mobile@2x.jpg 2x"
+              media="(max-width: 767px)">
+            <source srcset="img/macedonia-card-tablet@1x.jpg 1x, img/macedonia-card-tablet@2x.jpg 2x"
+              media="(max-width: 1023px)">
+            <img class="card__img" src="img/macedonia-card-desktop@1x.jpg" srcset="img/macedonia-card-desktop@2x.jpg 2x"
+              width="430" height="596" alt="Македония">
           </picture>
           <div class="card__review">
             <h4 class="card__review-title">Отзывы</h4>
@@ -241,10 +258,12 @@
             <button class="card__button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
-            <source srcset="img/montenegro-card-mobile.jpg" media="(max-width: 767px)">
-            <source srcset="img/montenegro-card-tablet.jpg" media="(max-width: 1023px)">
-            <img class="card__img" src="img/montenegro-card-desktop.jpg" width="430" height="596"
-              alt="Черногория">
+            <source srcset="img/montenegro-card-mobile@1x.jpg 1x, img/montenegro-card-mobile@2x.jpg 2x"
+              media="(max-width: 767px)">
+            <source srcset="img/montenegro-card-tablet@1x.jpg 1x, img/montenegro-card-tablet@2x.jpg 2x"
+              media="(max-width: 1023px)">
+            <img class="card__img" src="img/montenegro-card-desktop@1x.jpg"
+              srcset="img/montenegro-card-desktop@2x.jpg 2x" width="430" height="596" alt="Черногория">
           </picture>
           <div class="card__review">
             <h4 class="card__review-title">Отзывы</h4>
@@ -265,9 +284,12 @@
             <button class="card__button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
-            <source srcset="img/croatia-card-mobile.jpg" media="(max-width: 767px)">
-            <source srcset="img/croatia-card-tablet.jpg" media="(max-width: 1023px)">
-            <img class="card__img" src="img/croatia-card-desktop.jpg" width="430" height="596" alt="Хорватия">
+            <source srcset="img/croatia-card-mobile@1x.jpg 1x, img/croatia-card-mobile@2x.jpg 2x"
+              media="(max-width: 767px)">
+            <source srcset="img/croatia-card-tablet@1x.jpg 1x, img/croatia-card-tablet@2x.jpg 2x"
+              media="(max-width: 1023px)">
+            <img class="card__img" src="img/croatia-card-desktop@1x.jpg" srcset="img/croatia-card-desktop@2x.jpg 2x"
+              width="430" height="596" alt="Хорватия">
           </picture>
           <div class="card__review">
             <h4 class="card__review-title">Отзывы</h4>
@@ -457,11 +479,11 @@
 
   <!--<script src="js/menu.min.js"></script>-->
   <!--<script src="js/svgxuse.js" defer></script>-->
-  <script src="js/navigation.js"></script>
-  <script src="js/menu.js"></script>
-  <script src="js/feedbackform.js"></script>
-  <script src="js/tabs.js"></script>
-  <script src="js/popuptour.js"></script>
+  <script src="js/navigation.min.js"></script>
+  <script src="js/menu.min.js"></script>
+  <script src="js/feedbackform.min.js"></script>
+  <script src="js/tabs.min.js"></script>
+  <script src="js/popuptour.min.js"></script>
   <script src="js/svgxuse.js" defer></script>
 
 </body>
