@@ -77,11 +77,9 @@
             В этом туре вы откроете для себя Европу в новом свете. Вас ждет: море, горы, а также потрясающая красота
             природы.
           </p>
-          <button class="intro__button button" type="button">
-            <a href="#places__choice" class="intro__button button">Cмотреть тур
-              <img class="button__icon" src="img/arrow-down.svg" width="16" height="16" alt="Смотреть тур">
-            </a>
-          </button>
+          <a href="#places__choice" class="intro__button">Cмотреть тур
+            <img class="intro__button-icon" src="img/arrow-down.svg" width="16" height="16" alt="Смотреть тур">
+          </a>
         </div>
       </section>
 
@@ -96,7 +94,7 @@
                 <source srcset="img/greece-tablet.jpg" media="(max-width: 1023px)">
                 <img class="countries__img" src="img/greece-desktop.jpg" alt="Греция">
               </picture>
-              <button class="countries__button">Смотреть подробнее</button>
+              <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Греция</div>
             </div>
           </a>
@@ -108,7 +106,7 @@
                 <source srcset="img/albania-tablet.jpg" media="(max-width: 1023px)">
                 <img class="countries__img" src="img/albania-desktop.jpg" alt="Албания">
               </picture>
-              <button class="countries__button">Смотреть подробнее</button>
+              <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Албания</div>
             </div>
           </a>
@@ -120,7 +118,7 @@
                 <source srcset="img/macedonia-tablet.jpg" media="(max-width: 1023px)">
                 <img class="countries__img" src="img/macedonia-desktop.jpg" alt="Македония">
               </picture>
-              <button class="countries__button">Смотреть подробнее</button>
+              <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Македония</div>
             </div>
           </a>
@@ -132,7 +130,7 @@
                 <source srcset="img/montenegro-tablet.jpg" media="(max-width: 1023px)">
                 <img class="countries__img" src="img/montenegro-desktop.jpg" alt="Черногория">
               </picture>
-              <button class="countries__button">Смотреть подробнее</button>
+              <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Черногория</div>
             </div>
           </a>
@@ -144,7 +142,7 @@
                 <source srcset="img/croatia-tablet.jpg" media="(max-width: 1023px)">
                 <img class="countries__img" src="img/croatia-desktop.jpg" alt="Хорватия">
               </picture>
-              <button class="countries__button">Смотреть подробнее</button>
+              <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Хорватия</div>
             </div>
           </a>
@@ -156,123 +154,128 @@
           <p class="places__choice-country" data-tab-name="montenegro">Черногория</p>
           <p class="places__choice-country" data-tab-name="croatia">Хорватия</p>
         </div>
-        <div class="countries__card greece countries__card--active" id="greece">
-          <div class="countries__card-description">
-            <h3 class="countries__card-title">Греция</h3>
-            <p class="countries__card-about">На севере Греции находится один из крупнейших комплексов монастырей,
+
+        <div class="places__card card card--active greece" id="greece">
+          <div class="card__description">
+            <h3 class="card__title">Греция</h3>
+            <p class="card__about">На севере Греции находится один из крупнейших комплексов монастырей,
               расположенных на вершинах скал. Название его «Метеора» буквально переводится как «висящие в воздухе». Этот
               монастырь основная цель нашего путешествия в Греции. После покарения скал из песчанника и обломочной
               горной породы, достигающих в высоту 600 метров, наградой будет неописуемая красота природы и атмосфера,
               царящая в монастырях Метеоры.</p>
-            <button class="countries__card-button button button--buy-tour" type="button">Купить тур сейчас</button>
+            <button class="card__button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
             <source srcset="img/greece-card-mobile.jpg" media="(max-width: 767px)">
             <source srcset="img/greece-card-tablet.jpg" media="(max-width: 1023px)">
-            <img class="countries__card-img" src="img/greece-card-desktop.jpg" alt="Греция">
+            <img class="card__img" src="img/greece-card-desktop.jpg" alt="Греция">
           </picture>
-          <div class="countries__review">
-            <h4 class="countries__review-title">Отзывы</h4>
-            <p class="countries__review-text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же
+          <div class="card__review">
+            <h4 class="card__review-title">Отзывы</h4>
+            <p class="card__review-text">Метеоры в Греции можно сравнить разве что с Монсерратт в Испании. Такие же
               высоченные скалы. Но здесь
               потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!
             </p>
-            <p class="countries__author-name">
-              <img class="countries__review-author" src="img/user-1.jpg" alt="автор отзыва Влада Голицина">
+            <p class="card__author-name">
+              <img class="card__review-author" src="img/user-1.jpg" alt="автор отзыва Влада Голицина">
               Влада Голицина
             </p>
           </div>
         </div>
-        <div class="countries__card albania" id="albania">
-          <div class="countries__card-description">
-            <h3 class="countries__card-title">Албания</h3>
-            <p class="countries__card-about">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей
+
+        <div class="places__card card albania" id="albania">
+          <div class="card__description">
+            <h3 class="card__title">Албания</h3>
+            <p class="card__about">В Албании мы посетим Курорт Ксамиль. Этот курорт поразит вас чистейшей
               водой и удивительным пляжем. Вначале кажется, что на пляже вас встречает обычный, правда невероятно
               белоснежный и слишком крупный песок. Однако, присмотревшись, можно понять, что это не песок, а камни,
               перетёртые до такого мелкого состояния.</p>
-            <button class="countries__card-button button button--buy-tour" type="button">Купить тур сейчас</button>
+            <button class="card__button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
             <source srcset="img/albania-card-mobile.jpg" media="(max-width: 767px)">
             <source srcset="img/albania-card-tablet.jpg" media="(max-width: 1023px)">
-            <img class="countries__card-img" src="img/albania-card-desktop.jpg" width="430" height="596" alt="Албания">
+            <img class="card__img" src="img/albania-card-desktop.jpg" width="430" height="596" alt="Албания">
           </picture>
-          <div class="countries__review">
-            <h4 class="countries__review-title">Отзывы</h4>
-            <p class="countries__review-text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с
+          <div class="card__review">
+            <h4 class="card__review-title">Отзывы</h4>
+            <p class="card__review-text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с
               собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
-            <p class="countries__author-name">
-              <img class="countries__review-author" src="img/user-2.jpg" alt="автор отзыва Маришка">Маришка
+            <p class="card__author-name">
+              <img class="card__review-author" src="img/user-2.jpg" alt="автор отзыва Маришка">Маришка
             </p>
           </div>
         </div>
-        <div class="countries__card macedonia" id="macedonia">
-          <div class="countries__card-description">
-            <h3 class="countries__card-title">Македония</h3>
-            <p class="countries__card-about">В Македонии нашей целью будет посетить Палаошник, который расположился в
+
+        <div class="places__card card macedonia" id="macedonia">
+          <div class="card__description">
+            <h3 class="card__title">Македония</h3>
+            <p class="card__about">В Македонии нашей целью будет посетить Палаошник, который расположился в
               удивительно красивой лесистой местности возле Охридского озера и Самуиловой твердыни. А также мы заберемся
               на вершину горы Татичев Камен где находится археологический памятник Кокино в длину около 100 метров.</p>
-            <button class="countries__card-button button button--buy-tour" type="button">Купить тур сейчас</button>
+            <button class="card__button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
             <source srcset="img/macedonia-card-mobile.jpg" media="(max-width: 767px)">
             <source srcset="img/macedonia-card-tablet.jpg" media="(max-width: 1023px)">
-            <img class="countries__card-img" src="img/macedonia-card-desktop.jpg" width="430" height="596"
+            <img class="card__img" src="img/macedonia-card-desktop.jpg" width="430" height="596"
               alt="Македония">
           </picture>
-          <div class="countries__review">
-            <h4 class="countries__review-title">Отзывы</h4>
-            <p class="countries__review-text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но
+          <div class="card__review">
+            <h4 class="card__review-title">Отзывы</h4>
+            <p class="card__review-text">Я бы сказал необычное старое здание. В архитектуре я не разбираюсь, но
               подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила,
               особенно после долгого пути в гору.</p>
-            <p class="countries__author-name">
-              <img class="countries__review-author" src="img/user-3.jpg" alt="автор отзыва Михаил Кузьмин">Михаил
+            <p class="card__author-name">
+              <img class="card__review-author" src="img/user-3.jpg" alt="автор отзыва Михаил Кузьмин">Михаил
               Кузьмин</p>
           </div>
         </div>
-        <div class="countries__card montenegro" id="montenegro">
-          <div class="countries__card-description">
-            <h3 class="countries__card-title">Черногория</h3>
-            <p class="countries__card-about">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в
+
+        <div class="places__card card montenegro" id="montenegro">
+          <div class="card__description">
+            <h3 class="card__title">Черногория</h3>
+            <p class="card__about">Черногория удивит нас самым большим в Европе каньоном реки Тара, который в
               некоторых местах высотой берегов доходит до 1300 метров, а шириной не превышает трех. При этом длина
               каньона составляет 80 км.</p>
-            <button class="countries__card-button button button--buy-tour" type="button">Купить тур сейчас</button>
+            <button class="card__button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
             <source srcset="img/montenegro-card-mobile.jpg" media="(max-width: 767px)">
             <source srcset="img/montenegro-card-tablet.jpg" media="(max-width: 1023px)">
-            <img class="countries__card-img" src="img/montenegro-card-desktop.jpg" width="430" height="596"
+            <img class="card__img" src="img/montenegro-card-desktop.jpg" width="430" height="596"
               alt="Черногория">
           </picture>
-          <div class="countries__review">
-            <h4 class="countries__review-title">Отзывы</h4>
-            <p class="countries__review-text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что
+          <div class="card__review">
+            <h4 class="card__review-title">Отзывы</h4>
+            <p class="card__review-text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что
               в фильмах :) Всем советую</p>
-            <p class="countries__author-name">
-              <img class="countries__review-author" src="img/user-4.jpg" alt="автор отзыва Анастасия Мей">Анастасия Мей
+            <p class="card__author-name">
+              <img class="card__review-author" src="img/user-4.jpg" alt="автор отзыва Анастасия Мей">Анастасия Мей
             </p>
           </div>
         </div>
-        <div class="countries__card croatia" id="croatia">
-          <div class="countries__card-description">
-            <h3 class="countries__card-title">Хорватия</h3>
-            <p class="countries__card-about">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный
+
+        <div class="places__card card croatia" id="croatia">
+          <div class="card__description">
+            <h3 class="card__title">Хорватия</h3>
+            <p class="card__about">В Хорватии мы посетим необычайную пещеру названную Бередине. Ее подземный
               мир увлечет вас на 80-ти метровую глубину через 5 освещенных залов, украшенных удивительными
               нерукотворными скульптурами — сталактитами и сталагмитами — формировавшимися тысячи и тысячи лет.</p>
-            <button class="countries__card-button button button--buy-tour" type="button">Купить тур сейчас</button>
+            <button class="card__button button button--buy-tour" type="button">Купить тур сейчас</button>
           </div>
           <picture>
             <source srcset="img/croatia-card-mobile.jpg" media="(max-width: 767px)">
             <source srcset="img/croatia-card-tablet.jpg" media="(max-width: 1023px)">
-            <img class="countries__card-img" src="img/croatia-card-desktop.jpg" width="430" height="596" alt="Хорватия">
+            <img class="card__img" src="img/croatia-card-desktop.jpg" width="430" height="596" alt="Хорватия">
           </picture>
-          <div class="countries__review">
-            <h4 class="countries__review-title">Отзывы</h4>
-            <p class="countries__review-text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема!
+          <div class="card__review">
+            <h4 class="card__review-title">Отзывы</h4>
+            <p class="card__review-text">Мы поехали всей семьей, я, моя жена и родители. Пещера просто незабываема!
               А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни
               с чем не спутать по итогу :)</p>
-            <p class="countries__author-name">
-              <img class="countries__review-author" src="img/user-5.jpg" alt="автор отзыва Владимир Мулицин">Владимир
+            <p class="card__author-name">
+              <img class="card__review-author" src="img/user-5.jpg" alt="автор отзыва Владимир Мулицин">Владимир
               Мулицин</p>
           </div>
         </div>
@@ -326,11 +329,13 @@
               <p class="form__paragraph">Оставьте свой номер или e-mail и мы свяжемся с Вами</p>
               <div class="form__input-container">
                 <div tabindex="0" class="form__phone">
-                  <input id="phone" type="tel" class="form__input form__input--phone" name="phonenumber" value=""
+                  <label for="phone-1" class="form__label"></label>
+                  <input id="phone-1" type="tel" class="form__input form__input--phone" name="phonenumber" value=""
                     required placeholder="+7 Введите 10 цифр номера">
                 </div>
                 <div tabindex="0" class="form__email">
-                  <input id="email" type="email" class="form__input form__input--email" name="email" value="" required
+                  <label for="email-1" class="form__label"></label>
+                  <input id="email-1" type="email" class="form__input form__input--email" name="email" value="" required
                     placeholder="E-mail">
                 </div>
               </div>
@@ -396,7 +401,9 @@
         <div class="footer-menu__item footer-menu__item--contacts">
           <h3 class="footer-menu__title">Наши контакты</h3>
           <a href="mailto:puteshestviemechta@gmail.ru" class="footer-menu__link footer-menu__link--mail"
-            aria-label="написать">puteshestviemechta@gmail.ru</a>
+            aria-label="написать"><span
+              class="footer-menu__span footer-menu__span--email">puteshestviemechta@gmail.ru</span><span
+              class="footer-menu__span">почта</span></a>
           <a href="tel:+749978468446" class="footer-menu__link footer-menu__link--phone"
             aria-label="Позвонить">+7(499)-784-684-46</a>
         </div>
@@ -413,17 +420,19 @@
 
   <section class="popup popup--tour">
     <h2 class="visually-hidden">Модальное окно "Купить тур"</h2>
-    <div class="popup__content">
+    <div class="popup__content popup__content--tour">
       <form action="https://echo.htmlacademy.ru" method="post">
         <div class="popup__form form form--tour">
           <h3 class="form__title">Купить тур</h3>
           <div class="form__input-container">
             <div tabindex="0" class="form__phone">
-              <input id="phone" type="tel" class="form__input form__input--phone" name="phonenumber" value="" required
+              <label for="phone-2" class="form__label"></label>
+              <input id="phone-2" type="tel" class="form__input form__input--phone" name="phonenumber" value="" required
                 placeholder="+7 Введите 10 цифр номера">
             </div>
             <div tabindex="0" class="form__email">
-              <input id="email" type="email" class="form__input form__input--email" name="email" value="" required
+              <label for="email-2" class="form__label"></label>
+              <input id="email-2" type="email" class="form__input form__input--email" name="email" value="" required
                 placeholder="E-mail">
             </div>
           </div>
@@ -438,7 +447,7 @@
 
   <section class="popup popup--success">
     <h2 class="visually-hidden">Модальное окно "Форма успешно отправлена"</h2>
-    <div class="popup__content">
+    <div class="popup__content popup__content--success">
       <h3 class="popup__title">Форма успешно отправлена, спасибо! :)</h3>
       <button type="button" class="popup__button close">
         <img src="img/cross.svg" width="23" height="22" alt="Закрыть окно">
@@ -450,10 +459,10 @@
   <!--<script src="js/svgxuse.js" defer></script>-->
   <script src="js/navigation.js"></script>
   <script src="js/menu.js"></script>
-  <script src="js/validation.js"></script>
+  <script src="js/feedbackform.js"></script>
   <script src="js/tabs.js"></script>
+  <script src="js/popuptour.js"></script>
   <script src="js/svgxuse.js" defer></script>
-  <script src="js/popupTour.js" defer></script>
 
 </body>
 

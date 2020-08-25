@@ -28,6 +28,8 @@
   margin-right: auto;//623px;
 
   @media (max-width: $tablet-width) {
+    display: block;
+
     &--hide {
       display: none;
     }

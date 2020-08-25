@@ -1,6 +1,6 @@
 var tabItem = function () {
   var tabMenu = document.querySelectorAll(".places__choice-country");
-  var tabContent = document.querySelectorAll(".countries__card");
+  var tabContent = document.querySelectorAll(".places__card");
   var tabName;
   var countryCards = document.querySelectorAll(".countries__item");
 
@@ -24,9 +24,9 @@ var tabItem = function () {
   function selectTabContent(tabName) {
     tabContent.forEach(function (item) {
       if (item.classList.contains(tabName)) {
-        item.classList.add("countries__card--active")
+        item.classList.add("card--active")
       } else {
-        item.classList.remove("countries__card--active");
+        item.classList.remove("card--active");
       }
     })
   }
