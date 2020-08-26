@@ -6,10 +6,6 @@
   @media (max-width: $tablet-width) {
     flex-wrap: wrap;
   }
-
-  @media (max-width: $mobile-width) {
-    //width: 320px;
-  }
 }
 
 .footer-menu__item {
@@ -86,7 +82,6 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  //height: 270px;
   height: 195px;
 
   @media (max-width: $tablet-width) {
@@ -142,7 +137,6 @@
     position: relative;
 
     &::before {
-      //content: url("../img/mail.svg");
       content: url("../img/footer-phone.svg");
       position: absolute;
       top: 0;

@@ -9,14 +9,9 @@
 
   @media (max-width: $tablet-width) {
     min-height: 492.4px;
-    //width: 1023px;
     padding-top: 80.4px;
     padding-left: 21px;
     padding-right: 21px;
     padding-bottom: 50px;
-  }
-
-  @media (max-width: $mobile-width) {
-    //width: 767px;
   }
 }
