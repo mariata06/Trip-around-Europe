@@ -1,4 +1,5 @@
-/*****************************ОТПРАВКА ФОРМЫ, МОДАЛЬНЫЕ ОКНА******************************/
+/**************ОТПРАВКА ФОРМЫ Обратной связи, модальное окно успешной отправки*************/
+
 var feedbackFormButton = document.querySelector(".form__button--feedback");
 
 var popupSuccess = document.querySelector(".popup--success");
@@ -6,7 +7,7 @@ var closePopupSuccess = popupSuccess.querySelector(".popup__button");
 
 var form = document.querySelector(".feedback__form");
 
-var overlay = document.querySelector(".popup");
+//var overlay = document.querySelector(".popup");
 
 var userPhone = form.querySelector("[name=phonenumber]");
 
@@ -63,16 +64,19 @@ window.addEventListener("keydown", function (evt) {
   }
 });
 
+/*
 overlay.addEventListener("click", function (evt) {
   evt.preventDefault();
   popupSuccess.classList.remove("popup--success--show");
   popupSuccess.classList.add("popup--success--hide");
 });
+*/
 
 // для валидации номера телефона и почты
 /*
 function ValidMail() {
   var re = /^[\w-\.]+@[\w-]+\.[a-z]{2,4}$/i;
+  var regex = /.+@.+\..+/;
   var myMail = document.getElementById('email').value;
   var valid = re.test(myMail);
   if (valid) output = 'Адрес эл. почты введен правильно!';
@@ -82,9 +86,11 @@ function ValidMail() {
 }
 
 function ValidPhone() {
-  var re = /^\d[\d\(\)\ -]{4,14}\d$/;
-  var myPhone = document.getElementById('phone').value;
-  var valid = re.test(myPhone);
+  //var re = /^\d[\d\(\)\ -]{4,14}\d$/;
+  var regexp = /d{10}/;
+  //var myPhone = document.getElementById('phone').value;
+  var myPhone = document.querySelector('.form__input--phone').value;
+  var valid = regexp.test(myPhone);
   if (valid) output = 'Номер телефона введен правильно!';
   else output = 'Номер телефона введен неправильно!';
   document.getElementById('message').innerHTML = document.getElementById('message').innerHTML+'<br />'+output;
