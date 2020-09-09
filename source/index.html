@@ -81,33 +81,33 @@
         <h2 class="places__title">Места посещения</h2>
         <p class="places__about">Вы можете выбрать полный тур или частичный, с посещением первых 3 мест</p>
         <div class="places__countries countries">
-          <a href="#greece">
+          <a href="#greece" class="countries__link">
             <div class="countries__item countries__item--active" data-tab-name="greece">
               <picture>
                 <source srcset="img/greece-tablet@1x.jpg 1x, img/greece-tablet@2x.jpg 2x" media="(max-width: 767px)">
                 <source srcset="img/greece-tablet@1x.jpg 1x, img/greece-tablet@2x.jpg 2x" media="(max-width: 1023px)">
                 <img class="countries__img" src="img/greece-desktop@1x.jpg" srcset="img/greece-desktop@2x.jpg 2x"
-                  alt="Греция">
+                  alt="Греция" width="350" height="430">
               </picture>
               <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Греция</div>
             </div>
           </a>
 
-          <a href="#albania">
+          <a href="#albania" class="countries__link">
             <div class="countries__item" data-tab-name="albania">
               <picture>
                 <source srcset="img/albania-tablet@1x.jpg 1x, img/albania-tablet@2x.jpg 2x" media="(max-width: 767px)">
                 <source srcset="img/albania-tablet@1x.jpg 1x, img/albania-tablet@2x.jpg 2x" media="(max-width: 1023px)">
                 <img class="countries__img" src="img/albania-desktop@1x.jpg" srcset="img/albania-desktop@2x.jpg 2x"
-                  alt="Албания">
+                  alt="Албания" width="350" height="430">
               </picture>
               <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Албания</div>
             </div>
           </a>
 
-          <a href="#macedonia">
+          <a href="#macedonia" class="countries__link">
             <div class="countries__item" data-tab-name="macedonia">
               <picture>
                 <source srcset="img/macedonia-tablet@1x.jpg 1x, img/macedonia-tablet@2x.jpg 2x"
@@ -115,14 +115,14 @@
                 <source srcset="img/macedonia-tablet@1x.jpg 1x, img/macedonia-tablet@2x.jpg 2x"
                   media="(max-width: 1023px)">
                 <img class="countries__img" src="img/macedonia-desktop@1x.jpg" srcset="img/macedonia-desktop@2x.jpg 2x"
-                  alt="Македония">
+                  alt="Македония" width="350" height="430">
               </picture>
               <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Македония</div>
             </div>
           </a>
 
-          <a href="#montenegro">
+          <a href="#montenegro" class="countries__link">
             <div class="countries__item" data-tab-name="montenegro">
               <picture>
                 <source srcset="img/montenegro-tablet@1x.jpg 1x, img/montenegro-tablet@2x.jpg 2x"
@@ -130,20 +130,20 @@
                 <source srcset="img/montenegro-tablet@1x.jpg 1x, img/montenegro-tablet@2x.jpg 2x"
                   media="(max-width: 1023px)">
                 <img class="countries__img" src="img/montenegro-desktop@1x.jpg"
-                  srcset="img/montenegro-desktop@2x.jpg 2x" alt="Черногория">
+                  srcset="img/montenegro-desktop@2x.jpg 2x" alt="Черногория" width="350" height="430">
               </picture>
               <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Черногория</div>
             </div>
           </a>
 
-          <a href="#croatia">
+          <a href="#croatia" class="countries__link">
             <div class="countries__item" data-tab-name="croatia">
               <picture>
                 <source srcset="img/croatia-tablet@1x.jpg 1x, img/croatia-tablet@2x.jpg 2x" media="(max-width: 767px)">
                 <source srcset="img/croatia-tablet@1x.jpg 1x, img/croatia-tablet@2x.jpg 2x" media="(max-width: 1023px)">
                 <img class="countries__img" src="img/croatia-desktop@1x.jpg" srcset="img/croatia-desktop@2x.jpg 2x"
-                  alt="Хорватия">
+                  alt="Хорватия" width="350" height="430">
               </picture>
               <div class="countries__button">Смотреть подробнее</div>
               <div class="countries__title">Хорватия</div>
@@ -151,11 +151,12 @@
           </a>
         </div>
         <div class="places__choice" id="places__choice">
-          <p class="places__choice-country places__choice-country--active" data-tab-name="greece">Греция</p>
-          <p class="places__choice-country" data-tab-name="albania">Албания</p>
-          <p class="places__choice-country" data-tab-name="macedonia">Македония</p>
-          <p class="places__choice-country" data-tab-name="montenegro">Черногория</p>
-          <p class="places__choice-country" data-tab-name="croatia">Хорватия</p>
+          <button type="button" class="places__choice-country places__choice-country--active"
+            data-tab-name="greece">Греция</button>
+          <button type="button" class="places__choice-country" data-tab-name="albania">Албания</button>
+          <button type="button" class="places__choice-country" data-tab-name="macedonia">Македония</button>
+          <button type="button" class="places__choice-country" data-tab-name="montenegro">Черногория</button>
+          <button type="button" class="places__choice-country" data-tab-name="croatia">Хорватия</button>
         </div>
 
         <div class="places__card card card--active greece" id="greece">
@@ -174,7 +175,7 @@
             <source srcset="img/greece-card-tablet@1x.jpg 1x, img/greece-card-tablet@2x.jpg 2x"
               media="(max-width: 1023px)">
             <img class="card__img" src="img/greece-card-desktop@1x.jpg" srcset="img/greece-card-desktop@2x.jpg 2x"
-              alt="Греция">
+              alt="Греция" width="430" height="596">
           </picture>
           <div class="card__review">
             <h4 class="card__review-title">Отзывы</h4>
@@ -183,7 +184,8 @@
               потрясает масштаб. Огромная территория, высоко в горах. Ощущение такое, как будто стоишь на краю света!
             </p>
             <p class="card__author-name">
-              <img class="card__review-author" src="img/user-1.jpg" alt="автор отзыва Влада Голицина">
+              <img class="card__review-author" src="img/user-1.jpg" alt="автор отзыва Влада Голицина" width="38"
+                height="38">
               Влада Голицина
             </p>
           </div>
@@ -211,7 +213,8 @@
             <p class="card__review-text">Замечательный курорт, обязательно стоит посетить. В следующий раз возьму с
               собой сестру, чтобы тоже смогла вкусить все красоты природы :)</p>
             <p class="card__author-name">
-              <img class="card__review-author" src="img/user-2.jpg" alt="автор отзыва Маришка">Маришка
+              <img class="card__review-author" src="img/user-2.jpg" alt="автор отзыва Маришка" width="38"
+                height="38">Маришка
             </p>
           </div>
         </div>
@@ -238,7 +241,8 @@
               подъем в гору был очень веселым так как люди оказались легкими и заводными. Красота природы впечатлила,
               особенно после долгого пути в гору.</p>
             <p class="card__author-name">
-              <img class="card__review-author" src="img/user-3.jpg" alt="автор отзыва Михаил Кузьмин">Михаил
+              <img class="card__review-author" src="img/user-3.jpg" alt="автор отзыва Михаил Кузьмин" width="38"
+                height="38">Михаил
               Кузьмин</p>
           </div>
         </div>
@@ -264,7 +268,8 @@
             <p class="card__review-text">Неописуемой красоты каньон! Ничего прекраснее в жизни не видела, разве что
               в фильмах :) Всем советую</p>
             <p class="card__author-name">
-              <img class="card__review-author" src="img/user-4.jpg" alt="автор отзыва Анастасия Мей">Анастасия Мей
+              <img class="card__review-author" src="img/user-4.jpg" alt="автор отзыва Анастасия Мей" width="38"
+                height="38">Анастасия Мей
             </p>
           </div>
         </div>
@@ -291,7 +296,8 @@
               А то, что все это формировалось тысячелетиями, мега необычно. Первоначально даже не верилось, но натур ни
               с чем не спутать по итогу :)</p>
             <p class="card__author-name">
-              <img class="card__review-author" src="img/user-5.jpg" alt="автор отзыва Владимир Мулицин">Владимир
+              <img class="card__review-author" src="img/user-5.jpg" alt="автор отзыва Владимир Мулицин" width="38"
+                height="38">Владимир
               Мулицин</p>
           </div>
         </div>
@@ -366,53 +372,59 @@
       <div class="page-footer__menu footer-menu">
         <div class="footer-menu__item footer-menu__item--next-travels">
           <h3 class="footer-menu__title">Следующие путешествия</h3>
-          <ul class="footer-menu__country-list">
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="marseilles.html">Марсель</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="nimes.html">Ним</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="montpellier.html">Монпелье</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="barcelona.html">Барселона</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="palm.html">Пальма</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="sardinia.html">Сардиния</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="palermo.html">Палермо</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="catania.html">Катания</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="naples.html">Неаполь</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="rome.html">Рим</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="kors.html">Корс</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="nice.html">Ницца</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="monaco.html">Монако</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="ding-les-bains.html">Динь-ле-Бен</a>
-            </li>
-            <li class="footer-menu__country-item">
-              <a class="footer-menu__country-link" href="grenoble.html">Гренобль</a>
-            </li>
-          </ul>
+          <div class="footer-menu__country-list-wrapper">
+            <ul class="footer-menu__country-list">
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="marseilles.html">Марсель</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="nimes.html">Ним</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="montpellier.html">Монпелье</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="barcelona.html">Барселона</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="palm.html">Пальма</a>
+              </li>
+            </ul>
+            <ul class="footer-menu__country-list">
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="sardinia.html">Сардиния</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="palermo.html">Палермо</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="catania.html">Катания</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="naples.html">Неаполь</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="rome.html">Рим</a>
+              </li>
+            </ul>
+            <ul class="footer-menu__country-list">
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="kors.html">Корс</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="nice.html">Ницца</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="monaco.html">Монако</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="ding-les-bains.html">Динь-ле-Бен</a>
+              </li>
+              <li class="footer-menu__country-item">
+                <a class="footer-menu__country-link" href="grenoble.html">Гренобль</a>
+              </li>
+            </ul>
+          </div>
         </div>
         <div class="footer-menu__item footer-menu__item--contacts">
           <h3 class="footer-menu__title">Наши контакты</h3>

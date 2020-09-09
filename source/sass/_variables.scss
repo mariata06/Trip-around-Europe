@@ -10,8 +10,10 @@ $grey: #e5e5e5; // цвет для body
 $light-blue: #add8e6; // основной цвет фона под фоновым изображением
 $color-line: #d7d9df; // цвет разделяющих линий
 
-$tablet-width: 1023px; // максимум для версии пишем когда идем от desktop к mobile (768px - 1023px;)
-$mobile-width: 767px;   // максимум для версии пишем когда идем от desktop к mobile (320px - 767px;)
+$max-tablet-width: 1023px; // максимум для версии пишем когда идем от desktop к mobile (768px - 1023px;)
+$max-mobile-width: 767px; // максимум для версии пишем когда идем от desktop к mobile (320px - 767px;)
+$min-tablet-width: 768px;
+//$min-mobile-width: 320px;
 
 //RETINA VARIABLES
 $retina-dpi: 144dpi;

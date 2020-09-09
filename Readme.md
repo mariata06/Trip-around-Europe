@@ -45,3 +45,11 @@ git clone SSH-адрес_вашего_форка
 #### 4. Начинайте обучение!
 
 ---
+
+<!--Для резинового дизайна вместо старых media-queries:
+@media (max-width: $tablet-width) это значит макс ширина страницы 1023px
+@media (max-width: $mobile-width) это значит макс ширина страницы 767px
+пишу новые всем блокам с учетом резиновой верстки от минимальной до маскимальной ширины:
+@media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) это значит от 768px до 1023px
+@media (min-width: $min-mobile-width) and (max-width: $max-mobile-width) это значит от 320px до 767px
+-->

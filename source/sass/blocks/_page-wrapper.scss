@@ -1,14 +1,15 @@
 .page-wrapper {
-  width: 1920px;
+  //width: 1920px;
   margin: 0 auto;
+  //min-width: 1024px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     margin: 0 auto;
-    width: 100%;
+    //width: 100%;
   }
 
-  @media (max-width: $mobile-width) {
-    width: 100%;
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    //width: 100%;
     margin: 0 auto;
   }
 }

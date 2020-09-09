@@ -3,8 +3,24 @@
   flex-direction: row;
   justify-content: space-between;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     flex-wrap: wrap;
+  }
+
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.footer-menu__country-list-wrapper {
+  display: flex;
+  width: 395px;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    width: auto;
   }
 }
 
@@ -12,19 +28,21 @@
   width: 390px;
   border-right: 1px solid $color-line;
 
-  @media (max-width: $mobile-width) {
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
     border-right: none;
-    width: 296px;
+    //width: 296px;
     text-align: center;
   }
 
   &--next-travels {
-    @media (max-width: $tablet-width) {
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       width: 395px;
+      border: none;
     }
 
-    @media (max-width: $mobile-width) {
-      max-width: 296px;
+    @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+      //max-width: 296px;
+      width: 100%;
     }
   }
 
@@ -33,15 +51,20 @@
     flex-direction: column;
     padding-left: 90px;
 
-    @media (max-width: $tablet-width) {
-      width: 331px;
-      border-right: none;
+    @media (min-width: 1024px) and (max-width: 1700px) {
       padding-left: 50px;
     }
 
-    @media (max-width: $mobile-width) {
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+      width: 331px;
+      border: none;
+      padding-left: 50px;
+    }
+
+    @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
       padding-left: 0;
-      width: 296px;
+      //width: 296px;
+      width: auto;
     }
   }
 
@@ -49,7 +72,7 @@
     padding-left: 49px;
     border-right: none;
 
-    @media (max-width: $tablet-width) {
+    @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
       width: 100%;
       padding-left: 0;
       text-align: center;
@@ -57,9 +80,10 @@
       padding-top: 30px;
     }
 
-    @media (max-width: $mobile-width) {
+    @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
       padding-left: 0;
-      width: 296px;
+      //width: 296px;
+      width: auto;
     }
   }
 }
@@ -71,8 +95,9 @@
   margin: 0;
   margin-bottom: 20px;
 
-  @media (max-width: $mobile-width) {
-    width: 296px;
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    //width: 296px;
+    width: auto;
   }
 }
 
@@ -82,14 +107,19 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  height: 195px;
+  max-height: 165px;
+  list-style: none;
+  min-width: 131px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     height: 180px;
+    min-width: 125px;
   }
 
-  @media (max-width: $mobile-width) {
-    width: 296px;
+  &:last-child {
+    @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+      margin: 0 auto;
+    }
   }
 }
 
@@ -106,8 +136,11 @@
 }
 
 .footer-menu__paragraph {
-  @media (max-width: $mobile-width) {
-    width: 296px;
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    //width: 296px;
+    margin: 0 auto;
+    margin-bottom: 0;
+    width: 100%;
   }
 }
 
@@ -144,20 +177,24 @@
       left: 0;
     }
   }
+
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    margin: 0 auto;
+  }
 }
 
 .footer-menu__span {
   display: none;
 
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    display: block;
+  }
+
   &--email {
     display: block;
 
-    @media (max-width: $mobile-width) {
+    @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
       display: none;
     }
-  }
-
-  @media (max-width: $mobile-width) {
-    display: block;
   }
 }

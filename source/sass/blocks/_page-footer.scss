@@ -1,17 +1,29 @@
 .page-footer {
   width: 100%;
-  padding-left: 375px;
-  padding-right: 375px;
+  padding-left: 388px;
+  padding-right: 384px;
   min-height: 270px;
   padding-top: 170px;
   padding-bottom: 75px;
   background-color: $white;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: 1024px) and (max-width: 1700px) {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     min-height: 492.4px;
     padding-top: 80.4px;
     padding-left: 21px;
     padding-right: 21px;
     padding-bottom: 50px;
+  }
+
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    padding-left: 11px;
+    padding-right: 13px;
+    padding-top: 50px;
+    padding-bottom: 25px;
   }
 }

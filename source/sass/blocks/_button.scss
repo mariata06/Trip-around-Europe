@@ -16,10 +16,16 @@
     background-color: $salmon-orange;
   }
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding: 19px 40px 19px 40px;
     font-size: 10px;
     font-weight: 500;
     width: 250px;
+  }
+
+  &--buy-tour {
+    @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+      width: 100%;
+    }
   }
 }

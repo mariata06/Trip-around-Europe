@@ -2,6 +2,7 @@
   display: flex;
   flex-wrap: wrap;
 
+  /*
   &--active {
     border-color: $salmon-pink;
 
@@ -25,6 +26,7 @@
       }
     }
   }
+  */
 
   &:hover {
     border-color: $salmon-pink;
@@ -50,12 +52,21 @@
     }
   }
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    order: 2;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     &--complex,
     &--budget {
       max-width: 288px;
       order: 2;
     }
+  }
+
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    justify-content: center;
+    order: 2;
   }
 }
 
@@ -68,7 +79,7 @@
   justify-content: space-between;
   margin-bottom: 40px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     font-size: 24px;
     flex-wrap: wrap;
     text-align: center;
@@ -78,6 +89,16 @@
     padding-left: 20px;
     padding-right: 20px;
   }
+
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 11px;
+  }
 }
 
 .rate__paragraph {
@@ -85,9 +106,16 @@
   padding-bottom: 28px;
   border-bottom: 1px solid rgba(20, 21, 23, 0.3);
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     text-align: center;
     padding-bottom: 10px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    text-align: center;
+    //margin-top: 30px;
     margin-left: 20px;
     margin-right: 20px;
   }
@@ -102,10 +130,16 @@
   line-height: 32px;
   padding-left: 30px;
   padding-bottom: 39px;
+  list-style: none;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding-left: 50px;
     padding-right: 20px;
+  }
+
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    margin-left: 20px;
+    margin-right: 20px;
   }
 }
 
@@ -125,7 +159,7 @@
 .rate__amount {
   align-self: end;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding-top: 10px;
     width: 100%;
   }

@@ -27,15 +27,18 @@ body {
   font-weight: 400;
   color: $dark;
   background-color: $grey;
+  //min-width: $min-mobile-width;
 }
 
+/*
 ul {
   list-style: none;
 }
+*/
 
 img {
   max-width: 100%;
-  height: auto;
+  //height: auto;
 }
 
 a {

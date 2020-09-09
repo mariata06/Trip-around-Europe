@@ -4,12 +4,25 @@
   padding-left: 81px;
   padding-right: 0;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    padding-left: 0;
+    order: 1;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     width: 100%;
     order: 1;
     padding-top: 0;
     padding-left: 0;
     margin-bottom: 30px;
+  }
+
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    padding: 0;
+    order: 1;
   }
 }
 
@@ -22,7 +35,7 @@
   display: inline;
   border-bottom: 1px solid $salmon-pink;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     text-align: center;
     display: block;
     border-bottom: none;
@@ -31,26 +44,34 @@
     margin: 0 auto;
   }
 
-  @media (max-width: $mobile-width) {
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
     font-size: 24px;
+    border-bottom: none;
+    text-align: center;
+    display: block;
   }
 }
 
 .rate-info__paragraph {
   margin-top: 30px;
-  width: 299px;
+  //width: 299px;
   opacity: 0.7;
   line-height: 27.2px;
   margin-bottom: 60px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    width: 100%;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     width: 100%;
     text-align: center;
     margin-bottom: 30px;
   }
 
-  @media (max-width: $mobile-width) {
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
     margin-top: 0;
+    text-align: center;
   }
 }
 
@@ -61,15 +82,17 @@
   margin: 0;
   padding-left: 50px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding-left: 0;
     text-align: center;
     width: 100%;
     margin-bottom: 10px;
   }
 
-  @media (max-width: $mobile-width) {
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
     font-size: 18px;
+    padding-left: 0;
+    text-align: center;
   }
 }
 
@@ -79,33 +102,39 @@
   font-weight: 400;
   margin: 0;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     text-align: center;
     text-decoration: underline;
   }
 
-  @media (max-width: $mobile-width) {
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
     font-size: 18px;
     padding-left: 0;
+    text-align: center;
   }
 }
 
 .rate-info__link {
   padding-left: 15px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     &--active {
       color: $salmon-pink;
     }
   }
 
-  @media (max-width: $mobile-width) {
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
     padding-left: 0;
+    color: $salmon-pink;
   }
 }
 
 .rate-info__icon {
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    display: none;
+  }
+
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
     display: none;
   }
 }

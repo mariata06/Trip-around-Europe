@@ -8,14 +8,44 @@
   justify-content: space-between;
   background-color: $white;
 
-  @media (max-width: $tablet-width) {
-    padding: 112px 21px 125px 21px;
-    flex-wrap: wrap;
-    justify-content: space-around;
+  @media (min-width: 1800px) and (max-width: 1919px) {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 
-  @media (max-width: $mobile-width) {
-    padding-bottom: 0;
+  @media (min-width: 1600px) and (max-width: 1799px) {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+
+  @media (min-width: 1400px) and (max-width: 1599px) {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  @media (min-width: 1024px) and (max-width: 1199px) {
+    padding: 112px 50px 125px 50px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
+    padding: 112px 21px 125px 21px;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
+    flex-direction: column;
+    padding: 0;
+    padding-left: 17px;
+    padding-right: 17px;
+    //padding-bottom: 50px;
   }
 }
 
@@ -25,11 +55,13 @@
   padding: 40px 30px 30px 30px;
   border-radius: 3px;
 
-  @media (max-width: $tablet-width) {
+  @media (min-width: $min-tablet-width) and (max-width: $max-tablet-width) {
     padding: 30px 0 0 0;
   }
 
-  @media (max-width: $mobile-width) {
+  @media /*(min-width: $min-mobile-width) and*/ (max-width: $max-mobile-width) {
     margin-bottom: 30px;
+    width: 100%;
+    padding: 0;
   }
 }
